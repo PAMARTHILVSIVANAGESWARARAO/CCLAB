@@ -1,0 +1,21 @@
+5. Open Terminal in VScode ctrl + ~ to open the Terminal and Run the following command to create and
+Build Docker image
+Note : before run the below command you have to open the docker in desktop when ever you open the docker
+the server will automatically run and connect then the image will build when you run the below command
+“ docker build -t flask-image . “
+
+
+6. After executing the command they start exporting the layers to build the image in the docker container
+you can check in docker dashboard then go to containers
+
+7. After then run the another command as below
+“ docker run -d -p 5000:5000 --name flask-container flask-image “
+
+8. The server will run in http://localhost:5000 and if you wan to stop the server “ docker stop flask-container
+“
+
+9. To remove or delete the container run the command “ docker ps -a “
+10. Then it will display the list of containers what you build look up the last coloum containers
+names run the command to delete the particular of the container use the ‘ NAMES ‘
+11.For example assume that the container is ‘flask-container’ then run the command to remove 
+“ docker rm -f flask-container “ 
